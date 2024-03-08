@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1709941184838" clover="3.2.0">
+  <project timestamp="1709941184838" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="4" coveredelements="4" complexity="0" loc="2" ncloc="2" packages="1" files="2" classes="2"/>
+    <file name="linked-list.js" path="/Users/kimmykokonut/epicodus/computer-science/linked-lists/src/linked-list.js">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+    </file>
+    <file name="node.js" path="/Users/kimmykokonut/epicodus/computer-science/linked-lists/src/node.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,6 +1,6 @@
-# This is a basic test setup for Epicodus Code School for the computer science unit
+# Linked Lists Exercise
 
-### Goal: build small logic-based applications to try out new concepts. These applications will not have a UI. Instead, we will use a test-driven environment with JavaScript to build out these applications.
+### Goal: basic Javascript implementation of a linked list with Jest TDD Testing
 
 ### Setup:
 * Make a new repo with this template.
