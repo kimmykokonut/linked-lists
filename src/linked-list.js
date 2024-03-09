@@ -35,4 +35,27 @@ export default class LinkedList {
     }
    }
   }
+  //create new node w/data at beginning of list (becomes new head)
+  addFirst(data) {
+    const newNode = new Node(data);
+    let oldHead = this.head;
+    newNode.next = oldHead;
+    this.head = newNode;
+  }
+  insertAtIndex(index) {
+    //insert node a spec. point of list. if i> # nodes in list, node added to end of list
+  }
+  get(index){
+    //return node at spec.index. if no exist, return -1
+  }
+  search(data){
+    //search list for specified data. if no exist, return -1
+  }
+  count(){
+    //return total # nodes in list
+  }
+  //update remove() to return removed node (like pop())
+
+
+
 }

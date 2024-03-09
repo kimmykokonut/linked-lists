@@ -39,5 +39,9 @@ describe('LinkedList', () => {
   test('it should return -1 if the index does not exist', () => {
     expect(linkedListWithNodes.remove(9)).toEqual(-1);
   });
+  test('addFirst() should create new node with data at beginning of new list and become new head', () => {
+    linkedListWithNodes.addFirst("new head");
+    expect(linkedListWithNodes.head.data).toEqual("new head");
+  });
 
 });
