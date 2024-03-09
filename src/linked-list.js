@@ -59,10 +59,10 @@ export default class LinkedList {
     let currentIndex = 0;
 
     while (currentIndex + 1 <= index) {
-      if (currentNode.next === null) {
-        console.log('cn.next is null');
-        //insertLast(data);
-      }
+      // if (currentNode.next === null) {
+      //   console.log('cn.next is null');
+      //   //insertLast(data);
+      // }
       if (currentIndex + 1 === index) {
         nodeToInsert.next = currentNode.next;
         currentNode.next = nodeToInsert;
@@ -81,9 +81,18 @@ export default class LinkedList {
     }
     return count;
   }
-
+  //return node at spec.index. if no exist, return -1
   get(index) {
-    //return node at spec.index. if no exist, return -1
+    let currentNode = this.head;
+    let indexCount = 0;
+    while (currentNode != null) {
+      if (indexCount === index) {
+        return currentNode.data;
+      }
+      currentNode = currentNode.next;
+      indexCount++;
+    }
+    return -1;
   }
   search(data) {
     //search list for specified data. if no exist, return -1

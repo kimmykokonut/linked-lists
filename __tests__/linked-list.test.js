@@ -58,6 +58,17 @@ describe('LinkedList', () => {
     linkedListWithNodes.insertAtIndex(20, "testInsert");
     expect(linkedListWithNodes.head.next.next.next.next.data).toEqual("testInsert");
   });
+  test('insertAtIndex() should insert node at end of list if index location is equal to number of nodes', () => {
+    linkedListWithNodes.insertAtIndex(4, "currentnext is null");
+    expect(linkedListWithNodes.head.next.next.next.next.data).toEqual("currentnext is null");
+  });
+  test('get(index) should return node at index', () => {
+    expect(linkedListWithNodes.get(2)).toEqual("node3");
+  });
+  test('get(index) should return -1 if index does not exist', () => {
+    expect(linkedListWithNodes.get(10)).toEqual(-1);
+  });
+  
 
 
 });
