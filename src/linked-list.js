@@ -18,7 +18,9 @@ export default class LinkedList {
   }
   remove(indexToRemove) {
     if (indexToRemove === 0) {
+      const popped = this.head;
       this.head = this.head.next;
+      return popped.data;
     } else {
       let currentNode = this.head;
       let currentIndex = 0;
@@ -27,8 +29,9 @@ export default class LinkedList {
           return -1; //index out of range, doesn't exist.
         }
         if ((currentIndex + 1) === indexToRemove) {
+          const popped = currentNode.next;
           currentNode.next = currentNode.next.next;
-          break;
+          return popped.data;
         }
         currentNode = currentNode.next;
         currentIndex++;
@@ -72,6 +75,7 @@ export default class LinkedList {
       currentIndex++;
     }
   }
+  //return total # nodes in list
   getCount() {
     let currentNode = this.head;
     let count = 0;
@@ -94,12 +98,18 @@ export default class LinkedList {
     }
     return -1;
   }
+  //search list for specified data. if no exist, return -1
   search(data) {
-    //search list for specified data. if no exist, return -1
+    let currentNode = this.head;
+    while (currentNode != null) {
+      if (currentNode.data === data) {
+        return true;
+      }
+      currentNode = currentNode.next;
+    }
+    return -1;
   }
-  count() {
-    //return total # nodes in list
-  }
+  
   //update remove() to return removed node (like pop())
 
 

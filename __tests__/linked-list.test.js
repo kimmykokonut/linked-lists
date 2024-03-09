@@ -39,6 +39,9 @@ describe('LinkedList', () => {
   test('it should return -1 if the index does not exist', () => {
     expect(linkedListWithNodes.remove(9)).toEqual(-1);
   });
+  test('it should return the node data from the removed node', () => {
+    expect(linkedListWithNodes.remove(2)).toEqual("node3");
+  });
   test('addFirst() should create new node with data at beginning of new list and become new head', () => {
     linkedListWithNodes.addFirst("new head");
     expect(linkedListWithNodes.head.data).toEqual("new head");
@@ -67,6 +70,12 @@ describe('LinkedList', () => {
   });
   test('get(index) should return -1 if index does not exist', () => {
     expect(linkedListWithNodes.get(10)).toEqual(-1);
+  });
+  test('search(data) should return true if data exists', () => {
+    expect(linkedListWithNodes.search('node4')).toEqual(true);
+  });
+  test('search(data) should return -1 if data does not exist', () => {
+    expect(linkedListWithNodes.search('notANode')).toEqual(-1);
   });
   
 
