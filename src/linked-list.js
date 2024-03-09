@@ -48,9 +48,12 @@ export default class LinkedList {
       this.addFirst(data);
       return;
     }
-    // if (index > this.LinkedList.length) {
-    //   this.insertLast(data);
-    // }
+    let lengthList = this.getCount();
+    if (index > lengthList) {
+      this.insertLast(data);
+      return;
+    }
+
     const nodeToInsert = new Node(data);
     let currentNode = this.head;
     let currentIndex = 0;

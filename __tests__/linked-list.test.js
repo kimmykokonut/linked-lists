@@ -54,10 +54,10 @@ describe('LinkedList', () => {
   test('getCount should return total number nodes in linked list', () => {
     expect(linkedListWithNodes.getCount()).toEqual(4);
   });
-  // test('insertAtIndex() should insert a node at end of list if index location is greater than number of nodes', () => {
-  //   linkedListWithNodes.insertAtIndex(20, "testInsert");
-  //   expect(linkedListWithNodes.head.next.next.next.next.data).toEqual("testInsert");
-  // });
-  
+  test('insertAtIndex() should insert a node at end of list if index location is greater than number of nodes', () => {
+    linkedListWithNodes.insertAtIndex(20, "testInsert");
+    expect(linkedListWithNodes.head.next.next.next.next.data).toEqual("testInsert");
+  });
+
 
 });
