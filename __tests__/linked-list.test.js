@@ -36,5 +36,8 @@ describe('LinkedList', () => {
     linkedListWithNodes.remove(2);
     expect(linkedListWithNodes.head.next.next.data).toEqual("node4");
   });
-  
+  test('it should return -1 if the index does not exist', () => {
+    expect(linkedListWithNodes.remove(9)).toEqual(-1);
+  });
+
 });
