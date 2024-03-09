@@ -43,5 +43,20 @@ describe('LinkedList', () => {
     linkedListWithNodes.addFirst("new head");
     expect(linkedListWithNodes.head.data).toEqual("new head");
   });
+  test('insertAtIndex() should insert a node at specified index location', () => {
+    linkedListWithNodes.insertAtIndex(2, "testInsert");
+    expect(linkedListWithNodes.head.next.next.data).toEqual("testInsert");
+  });
+  test('insertAtIndex() should insert a node at 0 index location, referring to addFirst', () => {
+    linkedListWithNodes.insertAtIndex(0, "testInsert");
+    expect(linkedListWithNodes.head.data).toEqual("testInsert");
+  });
+  // test('insertAtIndex() should insert a node at end of list if index location is greater than number of nodes', () => {
+  //   linkedListWithNodes.insertAtIndex(20, "testInsert");
+  //   expect(linkedListWithNodes.head.next.next.next.next.data).toEqual("testInsert");
+  // });
+  test('getCount should return total number nodes in linked list', () => {
+    expect(linkedListWithNodes.getCount()).toEqual(4);
+  });
 
 });
